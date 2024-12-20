@@ -10,30 +10,30 @@ let listaInvitati = ["carlo.rossi@gmail.com", "luca.verdi@gmail.com", "maria.bia
 //creo il prompt per chiedere all'utente di inserire la propria email
 let userEmail = prompt("inserisci la tua email");
 
-//ciclo 
-for (i = 0; i < 1; i++) {
+//creo la variabile con la mail corretta e la inizializzo a falsa
+let mailInElenco = false;
+
+//ciclo per tutte le email presenti nell'array
+for (i = 0; i < listaInvitati.length; i++) {
     //verifico se l'email inserita rientra nella lista di chi può accedere
     if (userEmail === listaInvitati[i]) {
-        //alert con esito positivo
-        alert("Il tuo indirizzo e-mail è presente nella lista degli invitati: puoi partecipare alla festa");
-    }
-        
-    else {
-        //se l'utente sbaglia a digitare l'indirizzo, glielo chiedo di nuovo
-        let userEmail = prompt("Controlla di aver digitato l'email correttamente. Hai solo un altro tentativo.")
-        //verifico se l'utente inserisce di nuovo un indirizzo sbagliato
-        if (userEmail !== listaInvitati[i]) {
-        //alert con esito negativo
-            alert("Il tuo indirizzo e-mail non è presente nella lista degli invitati: purtroppo non potrai partecipare alla festa.")
-            
-        }
-        //altrimenti alert con esito positivo
-        else {
-            alert("Il tuo indirizzo e-mail è presente nella lista degli invitati: puoi partecipare alla festa");
-        }   
+        mailInElenco = true;
     }
 }
-//fine ciclo
+
+if (mailInElenco === true) {
+    //alert con esito positivo
+    alert("Il tuo indirizzo e-mail è presente nella lista degli invitati: puoi partecipare alla festa");
+}
+else {
+    alert("Il tuo indirizzo e-mail non è presente nella lista degli invitati: purtroppo non puoi partecipare alla festa");
+}
+
+
+
+ 
+
+
 
 
 
