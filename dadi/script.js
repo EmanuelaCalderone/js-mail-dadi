@@ -11,6 +11,9 @@ const giocataPc = Math.floor(Math.random() * 6) + 1;
 if (giocataUtente > giocataPc) {
     console.log("il numero", giocataUtente, "batte", giocataPc, "vince l'utente");
 }
+else if (giocataPc > giocataUtente){
+    console.log("il numero", giocataPc, "batte", giocataUtente, "vince il computer");
+}
 else {
-    console.log("il numero", giocataPc, "batte", giocataUtente, "vince il computer")
+    console.log("numero dell'utente: ", giocataUtente, "e il numero del computer: ", giocataPc, "sono uguali: pareggio");
 }
