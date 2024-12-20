@@ -13,16 +13,22 @@ Nota: Non è necessario provvedere alla validazione delle email */
 //fine ciclo
 
 let listaInvitati = ["carlo.rossi@gmail.com", "luca.verdi@gmail.com", "maria.bianchi@gmail.com"];
+let emailInserite = [];
 
 for (i = 0; i < listaInvitati.length; i++) {
     let userEmail = prompt("inserisci la tua email");
     if (userEmail === listaInvitati[i]) {
         alert("Il tuo indirizzo e-mail è presente nella lista degli invitati: puoi partecipare alla festa");
+       //emailInserite.push(userEmail);
     }
+
+    /* else if (userEmail === emailInserite[i]) {
+        alert("Questo indirizzo e-mail è stato già registrato");
+    } */
         
     else {
-        let secondoTentativo = prompt("Controlla di aver digitato l'email correttamente. Hai solo un altro tentativo.")
-        if (secondoTentativo !== listaInvitati[i]) {
+        let userEmail = prompt("Controlla di aver digitato l'email correttamente. Hai solo un altro tentativo.")
+        if (userEmail !== listaInvitati[i]) {
             alert("Il tuo indirizzo e-mail non è presente nella lista degli invitati: purtroppo non potrai partecipare alla festa.")
             
         }
