@@ -6,8 +6,8 @@ Nota: Non è necessario provvedere alla validazione delle email */
 
 
 //creo array con lista email
+//creo prompt per chiedere l'email all'utente
 //ciclo:
-    //creo prompt per chiedere l'email all'utente
     //creo condizionale per verificare che l'email inserita sia nella lista di chi può accedere
     //stampo esito
 //fine ciclo
@@ -15,16 +15,17 @@ Nota: Non è necessario provvedere alla validazione delle email */
 let listaInvitati = ["carlo.rossi@gmail.com", "luca.verdi@gmail.com", "maria.bianchi@gmail.com"];
 let emailInserite = [];
 
-for (i = 0; i < listaInvitati.length; i++) {
-    let userEmail = prompt("inserisci la tua email");
+let userEmail = prompt("inserisci la tua email");
+
+for (i = 0; i < 2; i++) {
     if (userEmail === listaInvitati[i]) {
         alert("Il tuo indirizzo e-mail è presente nella lista degli invitati: puoi partecipare alla festa");
-       //emailInserite.push(userEmail);
+        emailInserite.push(userEmail);
     }
 
-    /* else if (userEmail === emailInserite[i]) {
+    else if (userEmail === emailInserite[i]) {
         alert("Questo indirizzo e-mail è stato già registrato");
-    } */
+    }
         
     else {
         let userEmail = prompt("Controlla di aver digitato l'email correttamente. Hai solo un altro tentativo.")
