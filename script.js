@@ -12,7 +12,26 @@ Nota: Non è necessario provvedere alla validazione delle email */
     //stampo esito
 //fine ciclo
 
+let listaInvitati = ["carlo.rossi@gmail.com", "luca.verdi@gmail.com", "maria.bianchi@gmail.com"];
 
+for (i = 0; i < listaInvitati.length; i++) {
+    let userEmail = prompt("inserisci la tua email");
+    if (userEmail === listaInvitati[i]) {
+        alert("Il tuo indirizzo e-mail è presente nella lista degli invitati: puoi partecipare alla festa");
+    }
+        
+    else {
+        let secondoTentativo = prompt("Controlla di aver digitato l'email correttamente. Hai solo un altro tentativo.")
+        if (secondoTentativo !== listaInvitati[i]) {
+            alert("Il tuo indirizzo e-mail non è presente nella lista degli invitati: purtroppo non potrai partecipare alla festa.")
+            
+        }
+        else {
+            alert("Il tuo indirizzo e-mail è presente nella lista degli invitati: puoi partecipare alla festa");
+        }
+    
+    }
+}
 
 
 
